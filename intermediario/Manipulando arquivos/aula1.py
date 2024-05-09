@@ -1,3 +1,4 @@
+import os
 # Criando arquivos com Python + Context Manager with
 # Usamos a função open para abrir
 # um arquivo em Python (ele pode ou não existir)
@@ -28,7 +29,8 @@ caminho_arquivo = 'aula116.txt'
 
 
 # arquivo.close()
-with open(caminho_arquivo, 'a') as arquivo:
+with open(caminho_arquivo, 'w', encoding='utf-8') as arquivo:
+    arquivo.write('Atenção\n')
     arquivo.write('Linha 1\n')
     arquivo.write('Linha 2\n')
 
@@ -36,3 +38,9 @@ print('#' * 40)
 
 with open(caminho_arquivo, 'r') as arquivo:
     print(arquivo.read())
+
+# Remonemando
+os.rename(caminho_arquivo, 'aula.txt')
+
+# Remove o arquivo
+# os.remove(caminho_arquivo)
