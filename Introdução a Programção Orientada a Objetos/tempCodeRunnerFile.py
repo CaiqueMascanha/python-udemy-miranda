@@ -1,0 +1,2 @@
+
+print(caneta.cor)
