@@ -11,3 +11,20 @@
 #       _NomeClasse__nome_attr_ou_method
 #       só DEVE ser usado na classe em que foi
 #       declarado.
+
+class Foo:
+    def __init__(self) -> None:
+        self.public = 'Isso é público'
+        self._protect = 'isso é protegido'
+        self.__exemplo = 'isso é prvate'
+
+    def metodo_publico(self):
+        return 'metodo_publico'
+    
+    def _metodo_protect(self):
+        return '_metodo_protect'
+    
+f = Foo()
+print(f.public)
+print(f._metodo_protect())
+print(f.metodo_publico())
